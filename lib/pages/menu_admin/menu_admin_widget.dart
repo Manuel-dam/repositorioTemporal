@@ -225,6 +225,79 @@ class _MenuAdminWidgetState extends State<MenuAdminWidget> {
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                 ),
+                FFButtonWidget(
+                  onPressed: () async {
+                    context
+                        .pushNamed(AnadirProfesorDepartamentoWidget.routeName);
+                  },
+                  text: 'Añadir Profesor a Departamentos',
+                  icon: Icon(
+                    Icons.business,
+                    size: 24.0,
+                  ),
+                  options: FFButtonOptions(
+                    width: double.infinity,
+                    height: 60.0,
+                    padding: EdgeInsets.all(8.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconColor: Colors.white,
+                    color: FlutterFlowTheme.of(context).success,
+                    textStyle:
+                        FlutterFlowTheme.of(context).titleMedium.override(
+                              font: GoogleFonts.interTight(
+                                fontWeight: FontWeight.w600,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .fontStyle,
+                              ),
+                              color: Colors.white,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .fontStyle,
+                            ),
+                    elevation: 2.0,
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                ),
+                FFButtonWidget(
+                  onPressed: () {
+                    print('Button pressed ...');
+                  },
+                  text: 'Añadir alumno a Asignatura',
+                  icon: Icon(
+                    Icons.check_circle,
+                    size: 24.0,
+                  ),
+                  options: FFButtonOptions(
+                    width: double.infinity,
+                    height: 60.0,
+                    padding: EdgeInsets.all(8.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    iconColor: Colors.white,
+                    color: FlutterFlowTheme.of(context).warning,
+                    textStyle:
+                        FlutterFlowTheme.of(context).titleMedium.override(
+                              font: GoogleFonts.interTight(
+                                fontWeight: FontWeight.w600,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .fontStyle,
+                              ),
+                              color: Colors.white,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w600,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .fontStyle,
+                            ),
+                    elevation: 2.0,
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                ),
               ].divide(SizedBox(height: 24.0)),
             ),
           ),

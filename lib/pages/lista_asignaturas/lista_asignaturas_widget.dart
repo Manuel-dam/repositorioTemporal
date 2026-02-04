@@ -1,6 +1,5 @@
 import '/backend/schema/structs/index.dart';
 import '/components/tarjeta_asignatura/tarjeta_asignatura_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
@@ -84,23 +83,7 @@ class _ListaAsignaturasWidgetState extends State<ListaAsignaturasWidget> {
                       FlutterFlowTheme.of(context).headlineMedium.fontStyle,
                 ),
           ),
-          actions: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-              child: FlutterFlowIconButton(
-                borderRadius: 40.0,
-                buttonSize: 40.0,
-                icon: Icon(
-                  Icons.search_rounded,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 24.0,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
-              ),
-            ),
-          ],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),

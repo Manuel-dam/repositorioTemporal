@@ -9,10 +9,9 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<dynamic> recojerProfesorConcreta(int id) async {
+Future<List<dynamic>> recojerProfesoresNulos() async {
   final supabase = Supabase.instance.client;
-  final res =
-      await supabase.from('usuario').select().eq('id', id).limit(1).single();
+  final res = await supabase.from('profesor').select();
 
-  return res;
+  return res as List<dynamic>;
 }

@@ -7,3 +7,5 @@ export '/pages/lista_departamento/lista_departamento_widget.dart'
     show ListaDepartamentoWidget;
 export '/pages/lista_asignaturas/lista_asignaturas_widget.dart'
     show ListaAsignaturasWidget;
+export '/pages/anadir_profesor_departamento/anadir_profesor_departamento_widget.dart'
+    show AnadirProfesorDepartamentoWidget;

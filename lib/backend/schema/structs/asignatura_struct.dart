@@ -10,7 +10,7 @@ class AsignaturaStruct extends BaseStruct {
     int? id,
     String? nombre,
     String? descripcion,
-    String? creditos,
+    int? creditos,
     int? ano,
     int? carrera,
     int? profesor,
@@ -46,9 +46,11 @@ class AsignaturaStruct extends BaseStruct {
   bool hasDescripcion() => _descripcion != null;
 
   // "creditos" field.
-  String? _creditos;
-  String get creditos => _creditos ?? '';
-  set creditos(String? val) => _creditos = val;
+  int? _creditos;
+  int get creditos => _creditos ?? 0;
+  set creditos(int? val) => _creditos = val;
+
+  void incrementCreditos(int amount) => creditos = creditos + amount;
 
   bool hasCreditos() => _creditos != null;
 
@@ -84,7 +86,7 @@ class AsignaturaStruct extends BaseStruct {
         id: castToType<int>(data['id']),
         nombre: data['nombre'] as String?,
         descripcion: data['descripcion'] as String?,
-        creditos: data['creditos'] as String?,
+        creditos: castToType<int>(data['creditos']),
         ano: castToType<int>(data['ano']),
         carrera: castToType<int>(data['carrera']),
         profesor: castToType<int>(data['profesor']),
@@ -120,7 +122,7 @@ class AsignaturaStruct extends BaseStruct {
         ),
         'creditos': serializeParam(
           _creditos,
-          ParamType.String,
+          ParamType.int,
         ),
         'ano': serializeParam(
           _ano,
@@ -155,7 +157,7 @@ class AsignaturaStruct extends BaseStruct {
         ),
         creditos: deserializeParam(
           data['creditos'],
-          ParamType.String,
+          ParamType.int,
           false,
         ),
         ano: deserializeParam(
@@ -199,7 +201,7 @@ AsignaturaStruct createAsignaturaStruct({
   int? id,
   String? nombre,
   String? descripcion,
-  String? creditos,
+  int? creditos,
   int? ano,
   int? carrera,
   int? profesor,

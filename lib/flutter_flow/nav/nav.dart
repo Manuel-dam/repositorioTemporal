@@ -67,6 +67,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: ListaAsignaturasWidget.routeName,
           path: ListaAsignaturasWidget.routePath,
           builder: (context, params) => ListaAsignaturasWidget(),
+        ),
+        FFRoute(
+          name: AnadirProfesorDepartamentoWidget.routeName,
+          path: AnadirProfesorDepartamentoWidget.routePath,
+          builder: (context, params) => AnadirProfesorDepartamentoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

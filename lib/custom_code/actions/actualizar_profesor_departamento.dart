@@ -9,10 +9,12 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-Future<dynamic> recojerProfesorConcreta(int id) async {
+Future actualizarProfesorDepartamento(
+  String idProfe,
+  String idDepar,
+) async {
   final supabase = Supabase.instance.client;
-  final res =
-      await supabase.from('usuario').select().eq('id', id).limit(1).single();
-
-  return res;
+  await supabase
+      .from('profesor')
+      .update({'departamento': idDepar}).eq('id', idProfe);
 }
