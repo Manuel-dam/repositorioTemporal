@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/structs/index.dart';
+
 
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -34,17 +36,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => HomePageWidget(),
+      errorBuilder: (context, state) => InicioSesionWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomePageWidget(),
+          builder: (context, _) => InicioSesionWidget(),
         ),
         FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => HomePageWidget(),
+          name: InicioSesionWidget.routeName,
+          path: InicioSesionWidget.routePath,
+          builder: (context, params) => InicioSesionWidget(),
+        ),
+        FFRoute(
+          name: MenuAdminWidget.routeName,
+          path: MenuAdminWidget.routePath,
+          builder: (context, params) => MenuAdminWidget(),
+        ),
+        FFRoute(
+          name: ListaUsuariosWidget.routeName,
+          path: ListaUsuariosWidget.routePath,
+          builder: (context, params) => ListaUsuariosWidget(),
+        ),
+        FFRoute(
+          name: ListaDepartamentoWidget.routeName,
+          path: ListaDepartamentoWidget.routePath,
+          builder: (context, params) => ListaDepartamentoWidget(),
+        ),
+        FFRoute(
+          name: ListaAsignaturasWidget.routeName,
+          path: ListaAsignaturasWidget.routePath,
+          builder: (context, params) => ListaAsignaturasWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -116,6 +138,7 @@ class FFParameters {
     String paramName,
     ParamType type, {
     bool isList = false,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -133,6 +156,7 @@ class FFParameters {
       param,
       type,
       isList,
+      structBuilder: structBuilder,
     );
   }
 }
