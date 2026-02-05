@@ -6,23 +6,23 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'drag_item_profesor_model.dart';
-export 'drag_item_profesor_model.dart';
+import 'drag_item_alumno_model.dart';
+export 'drag_item_alumno_model.dart';
 
-class DragItemProfesorWidget extends StatefulWidget {
-  const DragItemProfesorWidget({
+class DragItemAlumnoWidget extends StatefulWidget {
+  const DragItemAlumnoWidget({
     super.key,
     required this.profesor,
   });
 
-  final ProfesorStruct? profesor;
+  final AlumnoStruct? profesor;
 
   @override
-  State<DragItemProfesorWidget> createState() => _DragItemProfesorWidgetState();
+  State<DragItemAlumnoWidget> createState() => _DragItemAlumnoWidgetState();
 }
 
-class _DragItemProfesorWidgetState extends State<DragItemProfesorWidget> {
-  late DragItemProfesorModel _model;
+class _DragItemAlumnoWidgetState extends State<DragItemAlumnoWidget> {
+  late DragItemAlumnoModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -33,7 +33,7 @@ class _DragItemProfesorWidgetState extends State<DragItemProfesorWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DragItemProfesorModel());
+    _model = createModel(context, () => DragItemAlumnoModel());
 
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -60,11 +60,11 @@ class _DragItemProfesorWidgetState extends State<DragItemProfesorWidget> {
       data: widget.profesor!.id.toString(),
       feedback: Material(
         type: MaterialType.transparency,
-        child: DragItemProfesorWidget(
+        child: DragItemAlumnoWidget(
           profesor: widget.profesor!,
         ),
       ),
-      childWhenDragging: DragItemProfesorWidget(
+      childWhenDragging: DragItemAlumnoWidget(
         profesor: widget.profesor!,
       ),
       child: Padding(

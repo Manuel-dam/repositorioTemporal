@@ -10,3 +10,6 @@ export 'actualizar_profesor_departamento.dart'
     show actualizarProfesorDepartamento;
 export 'recojer_departamento_todo.dart' show recojerDepartamentoTodo;
 export 'recojer_profesores_nulos.dart' show recojerProfesoresNulos;
+export 'crear_matricula.dart' show crearMatricula;
+export 'recojer_alumnos_todos.dart' show recojerAlumnosTodos;
+export 'recojer_asignaturas_todos.dart' show recojerAsignaturasTodos;
