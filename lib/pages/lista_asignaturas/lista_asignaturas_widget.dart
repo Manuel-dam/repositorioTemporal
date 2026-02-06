@@ -3,6 +3,7 @@ import '/components/tarjeta_asignatura/tarjeta_asignatura_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -111,10 +112,27 @@ class _ListaAsignaturasWidgetState extends State<ListaAsignaturasWidget> {
                       separatorBuilder: (_, __) => SizedBox(height: 12.0),
                       itemBuilder: (context, listaLVIndex) {
                         final listaLVItem = listaLV[listaLVIndex];
-                        return TarjetaAsignaturaWidget(
-                          key: Key(
-                              'Keyqxk_${listaLVIndex}_of_${listaLV.length}'),
-                          asignatura: listaLVItem,
+                        return InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed(
+                              AsignaturaDetalleWidget.routeName,
+                              queryParameters: {
+                                'asignatura': serializeParam(
+                                  listaLVItem,
+                                  ParamType.DataStruct,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          child: TarjetaAsignaturaWidget(
+                            key: Key(
+                                'Keyqxk_${listaLVIndex}_of_${listaLV.length}'),
+                            asignatura: listaLVItem,
+                          ),
                         );
                       },
                     );

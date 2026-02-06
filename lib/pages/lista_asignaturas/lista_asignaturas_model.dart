@@ -1,5 +1,6 @@
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'lista_asignaturas_widget.dart' show ListaAsignaturasWidget;
 import 'package:flutter/material.dart';
 

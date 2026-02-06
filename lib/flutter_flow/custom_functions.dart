@@ -17,3 +17,31 @@ String mostrarNombreCompleto(
 ) {
   return nombre + " " + apellidos;
 }
+
+List<String> buscarNombresAlumnos(
+  List<UsuarioStruct> alumnosUsuarios,
+  List<MatriculaStruct> matriculas,
+) {
+  List<String> resultado = [];
+
+  for (int i = 0; i < matriculas.length; i++) {
+    for (int j = 0; j < alumnosUsuarios.length; j++) {
+      if (matriculas[i].alumno == alumnosUsuarios[j].id) {
+        resultado.add(alumnosUsuarios[j].nombre);
+        break;
+      }
+    }
+  }
+
+  return resultado;
+}
+
+List<double> buscarNotaConcreta(List<MatriculaStruct> listaMatriculas) {
+  List<double> resultado = [];
+
+  for (int i = 0; i < listaMatriculas.length; i++) {
+    resultado.add(listaMatriculas[i].nota);
+  }
+
+  return resultado;
+}

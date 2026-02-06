@@ -13,3 +13,5 @@ export 'recojer_profesores_nulos.dart' show recojerProfesoresNulos;
 export 'crear_matricula.dart' show crearMatricula;
 export 'recojer_alumnos_todos.dart' show recojerAlumnosTodos;
 export 'recojer_asignaturas_todos.dart' show recojerAsignaturasTodos;
+export 'recojer_matricuca_concreta.dart' show recojerMatricucaConcreta;
+export 'generar_p_d_f.dart' show generarPDF;

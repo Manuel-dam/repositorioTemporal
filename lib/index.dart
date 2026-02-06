@@ -11,3 +11,5 @@ export '/pages/anadir_profesor_departamento/anadir_profesor_departamento_widget.
     show AnadirProfesorDepartamentoWidget;
 export '/pages/anadir_alumno_asignatura/anadir_alumno_asignatura_widget.dart'
     show AnadirAlumnoAsignaturaWidget;
+export '/pages/asignatura_detalle/asignatura_detalle_widget.dart'
+    show AsignaturaDetalleWidget;

@@ -77,6 +77,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AnadirAlumnoAsignaturaWidget.routeName,
           path: AnadirAlumnoAsignaturaWidget.routePath,
           builder: (context, params) => AnadirAlumnoAsignaturaWidget(),
+        ),
+        FFRoute(
+          name: AsignaturaDetalleWidget.routeName,
+          path: AsignaturaDetalleWidget.routePath,
+          builder: (context, params) => AsignaturaDetalleWidget(
+            asignatura: params.getParam(
+              'asignatura',
+              ParamType.DataStruct,
+              isList: false,
+              structBuilder: AsignaturaStruct.fromSerializableMap,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
