@@ -20,7 +20,7 @@ jobs:
     
     - name: Deploy to Pages repository
       run: |
-        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Manuel-dam/Manuelweb.github.io pages-repo
+        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Manuel-dam/ManuelwebMacarrones.github.io pages-repo
         cp -r build/web/* pages-repo/
         cd pages-repo
         git config user.name "github-actions[bot]"
