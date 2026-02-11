@@ -32,7 +32,7 @@ jobs:
 
     - name: Deploy APK to Android repository
       run: |
-        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Manuel-dam/movil.git android-repo
+        git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Manuel-dam/repositorioTemporal.git android-repo
         rm -rf android-repo/*
         cp build/app/outputs/flutter-apk/app-release.apk android-repo/
         cd android-repo
